@@ -15,7 +15,7 @@ This project implements a Convolutional Neural Network (CNN) for MNIST digit cla
 ├── train.py # Training script
 ├── requirements.txt # Dependencies
 └── .gitignore
-
+```
 
 ## Model Architecture
 - Input Layer: Accepts 28x28 grayscale images
