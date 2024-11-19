@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import torch
 import pytest
 from model.network import SimpleCNN
@@ -20,7 +24,6 @@ def test_model_accuracy():
     
     # Load the latest model
     import glob
-    import os
     model_files = glob.glob('models/*.pth')
     latest_model = max(model_files, key=os.path.getctime)
     model.load_state_dict(torch.load(latest_model))
